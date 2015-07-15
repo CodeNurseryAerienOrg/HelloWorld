@@ -1,5 +1,21 @@
 extends layout
-
+head
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js', charset='utf-8')
+  script alert(1)
+    
+body
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= title + ' ' + user
+  p Welcome back #{user} to 
+    b #{title}
+
+  p Ceci est un vrai 
+    b test !
+    
+  p= user
+
+  div.
+    <b>Bonjour !<br>les amis...</b>
+    
+    p #{user}
+    <table border=1><tr><td>jkj</td></tr><tr><td>#{user}</td></tr></table>
