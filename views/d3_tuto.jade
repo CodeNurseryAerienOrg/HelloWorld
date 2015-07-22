@@ -1,0 +1,35 @@
+extends layout
+block append scripts
+  script(src='http://d3js.org/d3.v3.min.js', charset='utf-8')
+
+block content
+  p
+    a(href='/') Maison
+  h2 Graphique Tuto
+  
+  p Hello
+  p World
+  p World
+  p World
+  p World
+  p World
+  p World
+  p World
+  p World
+  p World
+  
+  p Exemple copié de 
+    a(href='http://bl.ocks.org/mbostock/4062006') Chord Diagram
+    
+    
+  script.
+    d3.selectAll("p")
+    .data([4, 8, 15, 16, 23, 42], function(d,i){
+        console.log("New data binding: index " + i + " data " + d + " __data__" + this  );
+      return "data" + i;  
+    })
+    .style("font-size", function(d,i) { 
+        console.log("Using data: index " + i + " data " + d + " __data__" + this  );
+    return d + "px"; });
+
+    
